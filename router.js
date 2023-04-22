@@ -266,7 +266,7 @@ function preprocess_req(request, callback) {
 function preprocess_res(request) {
   request.steps = [{ mark: "on request", time: new Date().getTime() }];// lapse of time
   // for(let key in default_header){ request.res.setHeader(key, default_header[key]);}
-  request.res.writeHead(200,default_header);
+  
   request.res.error = (error) => { 
     on_error(error);
     request.isSent = true;
@@ -277,6 +277,7 @@ function preprocess_res(request) {
     return request;
   }//
   request.send = (data) => {
+    request.res.writeHead(200,default_header);
     if (!request.isSent) request.res.end(data);
     request.isSent = true;
     if(routing.addons.logs) routing.addons.logs.request_log_to_file(request);//log
