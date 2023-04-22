@@ -265,7 +265,8 @@ function preprocess_req(request, callback) {
 }
 function preprocess_res(request) {
   request.steps = [{ mark: "on request", time: new Date().getTime() }];// lapse of time
-  for(let key in default_header){ request.res.setHeader(key, default_header[key]);}
+  // for(let key in default_header){ request.res.setHeader(key, default_header[key]);}
+  request.res.writeHead(200,default_header);
   request.res.error = (error) => { 
     on_error(error);
     request.isSent = true;
