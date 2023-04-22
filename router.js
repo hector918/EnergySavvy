@@ -277,7 +277,7 @@ function preprocess_res(request) {
     return request;
   }//
   request.send = (data) => {
-    // request.res.writeHead(200,default_header);
+    request.res.writeHead(200,default_header);
     if (!request.isSent) {
       request.res.write(data);
       request.res.end();
