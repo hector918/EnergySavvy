@@ -5,7 +5,7 @@ const fs = require('fs');
 //v0.15 router for minimal dependency with base express functionally
 /*//////////////////////////////////
 const default_header = {
-  // "Access-Control-Allow-Origin": "https://127.0.0.1:4430",
+  "Access-Control-Allow-Origin": "*",
   // "Access-Control-Allow-Credentials": "true",
   // "Access-Control-Allow-Headers": "content-type,XFILENAME,XFILECATEGORY,XFILESIZE,token,Origin",
   // 'Content-Type': 'application/json; charset=UTF-8',
