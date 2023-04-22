@@ -16,7 +16,7 @@ const create_add_email_to_meter = (meter, email, callback) => {
   redisClient.hExists(hash_table, "email").then(if_exist=>{
     if(if_exist){
       //email already taken
-      callback({"result":"email taken"});
+      callback({"result":"meter taken"});
     }else{
       //available
       redisClient.HSET(hash_table, {email}).then(callback({"result":"success"}));

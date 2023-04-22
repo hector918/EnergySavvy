@@ -210,3 +210,5 @@
 {"date":"Sat Apr 22 2023 15:04:26 GMT-0400 (Eastern Daylight Time)","method":"GET","lapse":56,"ip":"127.0.0.1:57346","statusCode":200,"url":"/energysavvy/api/readbymeter/meter_number_7725479","via":"127.0.0.1:8899"},
 {"date":"Sat Apr 22 2023 15:08:36 GMT-0400 (Eastern Daylight Time)","method":"GET","lapse":47,"ip":"127.0.0.1:58430","statusCode":200,"url":"/energysavvy/api/readbymeter/meter_number_7725479","via":"127.0.0.1:8899"},
 {"date":"Sat Apr 22 2023 15:10:45 GMT-0400 (Eastern Daylight Time)","method":"GET","lapse":49,"ip":"127.0.0.1:59001","statusCode":200,"url":"/energysavvy/api/readbymeter/meter_number_7725479","via":"127.0.0.1:8899"},
+{"date":"Sat Apr 22 2023 15:17:34 GMT-0400 (Eastern Daylight Time)","method":"GET","lapse":47,"ip":"127.0.0.1:60750","statusCode":200,"url":"/energysavvy/api/readbymeter/meter_number_7725479","via":"127.0.0.1:8899"},
+{"date":"Sat Apr 22 2023 16:56:16 GMT-0400 (Eastern Daylight Time)","method":"GET","lapse":53,"ip":"127.0.0.1:52083","statusCode":200,"url":"/energysavvy/api/readbymeter/meter_number_7836716","via":"127.0.0.1:8899"},
