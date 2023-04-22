@@ -131,7 +131,7 @@ function preprocess_req(request, callback) {
         return;
       }
       //below are callbacks about post body
-      if(request.req.headers['content-type'].includes("multipart/form-data;")){// this is a file
+      if(request.req.headers['content-type'] && request.req.headers['content-type'].includes("multipart/form-data;")){// this is a file
         receive_file();
       }else{//not a file, assume it's a string
         receive_string();

@@ -20,12 +20,7 @@ async function import_data_to_redis(callback){
   .on('headers', (h) => headers = h)
   .on('data', async (data) => {
       acc++;
-      let tmp = [];
-      for(let key in data){
-        // tmp.push(key.trim(), data[key].trim());
-
-      }
-      counter[tmp.length] = counter[tmp.length]+1 || 1;
+      
       redisClient.HSET(`rowID_${acc}`, data, (err, replay)=>{
         if (err) {
           console.error(err);
@@ -39,7 +34,7 @@ async function import_data_to_redis(callback){
     // results.push(data);
   })
   .on('end', () => {
-    console.log(headers,counter)
+    console.log(headers)
     callback(`row count ${acc}`);
   });
 }
