@@ -279,8 +279,8 @@ function preprocess_res(request) {
   request.send = (data) => {
     request.res.writeHead(200, default_header);
     if (!request.isSent) {
-      // request.res.write(data);
-      // request.res.end();
+      request.res.write(data);
+      request.res.end();
     }
     request.isSent = true;
     if(routing.addons.logs) routing.addons.logs.request_log_to_file(request);//log
