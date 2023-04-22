@@ -45,7 +45,7 @@ module.exports = function energysavvy_api(energysavvy_api) {
 
   energysavvy_api.onRequest("/importDB","get", (request_and_response) => {// import dataset
     //only use on when init the DB
-    // import_data_to_redis((ret)=>{request_and_response.send(ret)});
+    import_data_to_redis((ret)=>{request_and_response.send(ret)});
   });
 
   energysavvy_api.onRequest("/read","get", (request_and_response) => {// reading dataset

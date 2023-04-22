@@ -6,10 +6,10 @@ const fs = require('fs');
 /*//////////////////////////////////
 const default_header = {
   "Access-Control-Allow-Origin": "*",
-  // "Access-Control-Allow-Credentials": "true",
-  // "Access-Control-Allow-Headers": "content-type,XFILENAME,XFILECATEGORY,XFILESIZE,token,Origin",
-  // 'Content-Type': 'application/json; charset=UTF-8',
-  // 'Access-Control-Allow-Methods': "GET, POST, PATCH, PUT, DELETE, OPTIONS",
+  "Access-Control-Allow-Credentials": "true",
+  "Access-Control-Allow-Headers": "content-type,XFILENAME,XFILECATEGORY,XFILESIZE,token,Origin",
+  'Content-Type': 'application/json; charset=UTF-8',
+  'Access-Control-Allow-Methods': "GET, POST, PATCH, PUT, DELETE, OPTIONS",
   // "Access-Control-Max-Age": "2592000",
   // "credentials": "true"
   // "vary" : "Origin"

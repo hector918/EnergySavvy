@@ -20,8 +20,10 @@ async function import_data_to_redis(callback){
   .on('headers', (h) => headers = h)
   .on('data', async (data) => {
       acc++;
-      
-      redisClient.HSET(`rowID_${acc}`, data, (err, replay)=>{
+      const trimmedData = {};
+      Object.keys(data).forEach(key => trimmedData[key.trim()] = data[key].trim());
+
+      redisClient.HSET(`rowID_${acc}`, trimmedData, (err, replay)=>{
         if (err) {
           console.error(err);
         } else {
