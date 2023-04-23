@@ -6,5 +6,5 @@ routing.addon('logs', require('./addons/logs'));
 // routing.addon('websocket', require('./addons/websocket-router'));
 // ///routing
 routing.use('/energysavvy', session, require('./energysavvy-backend/root.js'));
-routing.serveFile("/", './EnergySavvy-frondend/energysavvy/build');
+// routing.serveFile("/", './EnergySavvy-frondend/energysavvy/build');
 routing.use(`*`, (all)=>{all.onRequest('*', 'get', (session)=>{ session.code(404).send("404"); })});
