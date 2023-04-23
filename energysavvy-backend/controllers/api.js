@@ -5,7 +5,6 @@ module.exports = function energysavvy_api(energysavvy_api) {
     //
     let {meter_number} = request_and_response.params();
     get_by_meter_number(meter_number, (ret)=>{
-      console.log(request_and_response.res)
       request_and_response.send(JSON.stringify(ret));
     });
   });
