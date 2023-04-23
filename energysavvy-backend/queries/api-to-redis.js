@@ -32,7 +32,7 @@ const check_meter_avavilable = (meter, callback) => {
       callback(data);
     }else{
       //available
-      callback({"result":"email not taken"});
+      callback({"result":"meter not taken"});
       
     }
   })
